@@ -1,0 +1,12 @@
+version: '3'
+services:
+  web:
+    image: httpd:2.4
+    ports:
+     - 80:80
+    volumes:
+     - ./html/:/var/www/html/
+     - ./conf/httpd.conf:/usr/local/apache2/conf/httpd.conf
+     - ./conf/conf.d/:/usr/local/apache2/conf/conf.d/
+
+
